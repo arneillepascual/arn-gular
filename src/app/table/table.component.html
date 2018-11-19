@@ -1,0 +1,98 @@
+<div style="width:98%;">
+  <div class="row">
+    <div class="col-sm-4">
+      <button class="btn info">Add</button>
+      <button class="btn info">Delete</button>
+    </div>
+    <div class="col-sm-8" style="text-align: right">
+      Search:<input type="text" class="txt-search" />
+      <button class="btn info">Back</button>
+      <button class="btn info">Save</button>
+      <button class="btn info">Cancel</button>
+    </div>
+  </div>
+  <br>
+  <div>
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <!-- first Column -->
+        <ng-container matColumnDef="first">
+          <th mat-header-cell *matHeaderCellDef> <input type="checkbox"> </th>
+          <td mat-cell *matCellDef=""> <input type="checkbox"> </td>
+        </ng-container>
+        <!-- cover code Column -->
+        <ng-container matColumnDef="cover_code">
+          <th mat-header-cell *matHeaderCellDef>Cover Code </th>
+          <td mat-cell *matCellDef="let element"> {{element.cover_code}} </td>
+        </ng-container>
+        <!-- section Column -->
+        <ng-container matColumnDef="section">
+          <th mat-header-cell *matHeaderCellDef> Section </th>
+          <td mat-cell *matCellDef="let element"> {{element.section}} </td>
+        </ng-container>
+        <!-- bullet Column -->
+        <ng-container matColumnDef="bullet_no">
+          <th mat-header-cell *matHeaderCellDef> Bullet No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.bullet_no}} </td>
+        </ng-container>
+        <!-- sum insured Column -->
+        <ng-container matColumnDef="sum_insured">
+          <th mat-header-cell *matHeaderCellDef> Sum Insured </th>
+          <td mat-cell *matCellDef="let element"> {{element.sum_insured}} </td>
+        </ng-container>
+        <!-- sort se Column -->
+        <ng-container matColumnDef="sort_se">
+          <th mat-header-cell *matHeaderCellDef> Sort Se </th>
+          <td mat-cell *matCellDef="let element"> {{element.sort_se}} </td>
+        </ng-container>
+        <!-- add sl Column -->
+        <ng-container matColumnDef="add_sl">
+          <th mat-header-cell *matHeaderCellDef> Add Sl </th>
+          <td mat-cell *matCellDef=""> <input type="checkbox"> </td>
+        </ng-container>
+        <!-- actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions</th>
+          <td mat-cell *matCellDef=""> <img src="../../assets/check-img.png" class="img-size"><img src="../../assets/delete-img.png"
+              class="img-size">
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <tr>
+        <td><label class="txt-size-tblcmp">Total Sum Insured Section I</label>
+        </td>
+        <td>
+          <input type="text" class="txt-search">
+        </td>
+        <td>
+          <label class="txt-size-tblcmp">Section II </label>
+        </td>
+        <td><input type="text" class="txt-search"></td>
+        <td>
+          <label class="txt-size-tblcmp">Section III </label>
+        </td>
+        <td><input type="text" class="txt-search"></td>
+      </tr>
+      <tr>
+        <td><label class="txt-size-tblcmp"> Currency</label></td>
+        <td><input type="text" class="txt-search"></td>
+      </tr>
+      <tr>
+        <td><label class="txt-size-tblcmp"> Deductibles</label></td>
+        <td colspan="2"><textarea rows="2" class="txt-area"></textarea></td>
+      </tr>
+      <tr>
+        <td><label class="txt-size-tblcmp"> Remarks</label></td>
+        <td colspan="2"><textarea rows="2" class="txt-area"></textarea></td>
+      </tr>
+    </table>
+  </div>
+</div>

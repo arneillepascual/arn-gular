@@ -1,0 +1,84 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div class="main-page">
+  <div class="row">
+    <div class="col-sm-2" style="background-color: rgb(94, 138, 185);">
+      <div style="text-align: center">
+        <img src="../../assets/avatar.png" class="img-avatar">
+        <label>Username</label>
+      </div>
+      <mat-accordion>
+        <!-- <p *ngFor="let x of panelHeaderCategories">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title  (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                {{ x }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <a class="nav-link" (click)="panelData($event)">Quotation Processing</a>
+            <a class="nav-link" (click)="panelData($event)">Quotation Inquiry</a>
+          </mat-expansion-panel>
+        </p> -->
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <img src="../../assets/quo-img.png" class="img-size">
+              Quotation
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a class="nav-link txt-size" routerLink="quotation" (click)="panelData($event)">Quotation Processing</a>
+          <a class="nav-link txt-size" routerLink="" (click)="panelData($event)">Quotation Inquiry</a>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <img src="../../assets/underwriting-img.png" class="img-size">Underwriting
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a class="nav-link txt-size" routerLink="underwriting" (click)="panelData($event)">Underwriting Processing</a>
+          <a class="nav-link txt-size" routerLink="underwriting" (click)="panelData($event)">Underwriting Inquiry</a>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <img src="../../assets/count-img.png" class="img-size"> Accounting
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a class="nav-link txt-size" routerLink="accounting" (click)="panelData($event)">Accounting Processing</a>
+          <a class="nav-link txt-size" routerLink="accounting" (click)="panelData($event)">Accounting Inquiry</a>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <img src="../../assets/claims-img.png" class="img-size"> Claims
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a class="nav-link txt-size" routerLink="claims" (click)="panelData($event)">Claims Processing</a>
+          <a class="nav-link txt-size" routerLink="claims" (click)="panelData($event)">Claims Inquiry</a>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <img src="../../assets/security-img.png" class="img-size"> Security
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a class="nav-link txt-size" routerLink="security" (click)="panelData($event)">Security Processing</a>
+          <a class="nav-link txt-size" routerLink="security" (click)="panelData($event)">Security Inquiry</a>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+    </div>
+
+    <!-- .......... -->
+    <div class="col-sm-10">
+      <app-header></app-header>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item" *ngFor="let i of holder">{{ i }}</li>
+        </ol>
+      </nav>
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+</div>

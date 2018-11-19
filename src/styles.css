@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+
+.header-div {
+  height: 70px;
+  background-color: white;
+  padding-top: 10px;
+}
+.second-header-div {
+  height: 70px;
+}
+.custom-button {
+  width: inherit;
+  text-align: left;
+  background-color: inherit;
+  color: white;
+}
+.color-nav-item {
+  color: white;
+  font-weight: bold;
+}
+.img-size {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.img-avatar {
+  width: 150px;
+  height: 150px;
+}
+.txt-size {
+  font-size: x-small;
+  font-weight: bold;
+  
+}
+.breadcrumb {
+  background-color: rgb(94, 138, 185);
+  color: white;
+}
+table {
+  width: 100%;
+}
+.mat-elevation-z8 {
+  margin-bottom: 50px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+.button5 {border-radius: 50%;}
+.btn {
+  border: none; 
+  color: white; 
+  cursor: pointer; 
+  margin: 7px;
+  width: 100px;
+}
+.info {background-color: rgb(82, 148, 226);} 
+.info:hover {background: #096ab9;}
+.txt-search{
+  font-size: small;
+  width:250px;
+  margin: 5px;
+  padding: 5px;
+}
+.txt-size-tblcmp {
+  font-size: small;
+  margin:5px;
+}
+.txt-area {
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+}

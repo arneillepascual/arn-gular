@@ -1,0 +1,7 @@
+<div style="margin: 20px">
+  <mat-tab-group class="nav flex-column">
+    <mat-tab *ngFor="let x of tabContent " label="{{ x }}">
+      <app-table></app-table>
+    </mat-tab>
+  </mat-tab-group>
+</div>
